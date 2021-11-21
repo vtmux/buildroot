@@ -4,20 +4,20 @@
 #
 #############################################################
 
-ABDUCO_VERSION = 0.6
-ABDUCO_SOURCE = abduco-$(ABDUCO_VERSION)
-ABDUCO_SITE_METHOD = local
-ABDUCO_SITE = $(PWD)/exsrc/$(ABDUCO_SOURCE)
+VTM_ABDUCO_VERSION = 0.1
+#VTM_ABDUCO_SOURCE = vtm-abduco-$(VTM-ABDUCO_VERSION)
+#VTM_ABDUCO_SITE_METHOD = local
+VTM_ABDUCO_SITE = https://github.com/vtmux/abduco.git 
 
 
-ABDUCO_DEPENDENCIES =
+VTM_ABDUCO_DEPENDENCIES =
 
-define ABDUCO_BUILD_CMDS
+define VTM_ABDUCO_BUILD_CMDS
 	$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)
 endef
 
-define ABDUCO_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/abduco $(TARGET_DIR)/usr/bin
+define VTM_ABDUCO_INSTALL_TARGET_CMDS
+	$(INSTALL) -D -m 0755 $(@D)/vtm-abduco $(TARGET_DIR)/usr/bin
 endef
 
 $(eval $(generic-package))

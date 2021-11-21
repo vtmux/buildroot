@@ -1,5 +1,5 @@
 config BR2_PACKAGE_RTTY
-	bool "rtty"
+	bool "vtm-rtty"
 	depends on BR2_USE_MMU # fork()
 	select BR2_PACKAGE_LIBEV
 	help

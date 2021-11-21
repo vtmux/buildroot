@@ -1,5 +1,5 @@
 menuconfig BR2_PACKAGE_RTTYS_GOLANG
-	bool "rttys-golang"
+	bool "vtm-rttys-go"
 	depends on BR2_PACKAGE_HOST_GO_TARGET_ARCH_SUPPORTS
 	help
 		**************************

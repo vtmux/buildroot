@@ -1,24 +1,23 @@
 #############################################################
 #
-# dvtm
+# vtm-rttys
 #
 #############################################################
 
-RTTYS_VERSION = 0.6
-RTTYS_SOURCE = rttys
-RTTYS_SITE_METHOD = local
-RTTYS_SITE = $(PWD)/exsrc/$(RTTYS_SOURCE)
+VTM_RTTYS_VERSION = 0.1
+VTM_RTTYS_SOURCE = vtm-rttys
+#VTM_RTTYS_SITE_METHOD = local
+VTM_RTTYS_SITE = https://github.com/vtmux/rttys.git
+
+VTM_RTTYS_DEPENDENCIES =
 
 
-RTTYS_DEPENDENCIES =
-
-
-RTTYS_GOLANG_BUILD_TARGETS += cmd/rttys
-RTTYS_GOLANG_INSTALL_BINS += rttys
+VTM_RTTYS_GO_BUILD_TARGETS += cmd/rttys
+VTM_RTTYS_GO_INSTALL_BINS += rttys
 
 
 define RTTYS_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/rttys $(TARGET_DIR)/usr/bin
+	$(INSTALL) -D -m 0755 $(@D)/vtm-rttys $(TARGET_DIR)/usr/bin
 endef
 
 $(eval $(golang-package))

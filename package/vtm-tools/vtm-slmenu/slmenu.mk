@@ -4,19 +4,19 @@
 #
 #############################################################
 
-SLMENU_SOURCE = slmenu
-SLMENU_SITE_METHOD = local
-SLMENU_SITE = $(PWD)/exsrc/$(SLMENU_SOURCE)
+VTM_SLMENU_SOURCE = slmenu
+#VTM_SLMENU_SITE_METHOD = local
+VTM_SLMENU_SITE = https://github.com/vtmux/slmenu.git
 
 
-SLMENU_DEPENDENCIES =
+VTM_SLMENU_DEPENDENCIES =
 
-define SLMENU_BUILD_CMDS
+define VTM_SLMENU_BUILD_CMDS
 	$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)
 endef
 
-define SLMENU_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/slmenu $(TARGET_DIR)/usr/bin
+define VTM_SLMENU_INSTALL_TARGET_CMDS
+	$(INSTALL) -D -m 0755 $(@D)/vtm-slmenu $(TARGET_DIR)/usr/bin
 endef
 
 $(eval $(generic-package))

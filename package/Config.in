@@ -2449,7 +2449,7 @@ comment "Utilities"
 	source "package/vtm-tools/vtm-rtty/Config.in"
 	source "package/vtm-tools/vtm-rttys-go/Config.in"
 	source "package/vtm-tools/vtm-slmenu/Config.in"
-	source "package/vtm-tools/vtm-microcom/Config.in"
+#	source "package/vtm-tools/vtm-microcom/Config.in"
 	source "package/vtm-tools/vtm-klish/Config.in"
 	source "package/vtm-tools/vtm-abduco/Config.in"
 
