@@ -1,0 +1,6 @@
+menuconfig BR2_PACKAGE_SLMENU
+	bool "slmenu"
+
+	help
+	  slmenu is a dmenu clone for the console.
+	  https://github.com/joshaw/slmenu
